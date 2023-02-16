@@ -3,7 +3,7 @@
     <button>Основные</button>
   </div>
 
-  <form action="" class="main-form-create">
+  <form action="create-card" method="POST" class="main-form-create">
 
     <div class="main-form-create__title">
       <p>Название *</p>
@@ -72,9 +72,9 @@
     </div>
 
     <div class="main-form-create__block gap-2">
-      <button class="btn btn-success">Сохранить</button>
-      <button class="btn btn-deff">Выгрузить в маркетплейсы</button>
+      <button type="submit" name="create-total" class="btn btn-success">Сохранить</button>
+      <button type="submit" name="logout" class="btn btn-deff">Выгрузить в маркетплейсы</button>
     </div>
-    
+
   </form>
 </div>

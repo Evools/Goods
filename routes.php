@@ -3,12 +3,21 @@
 require_once __DIR__.'/router.php';
 
 
+get('/login', 'pages/login.php');
+post('/login', 'pages/login.php');
+
+get('/register', 'pages/register.php');
+post('/register', 'pages/register.php');
+
+
 get('/', 'pages/index.php');
 
 get('/create-card', 'pages/create-card.php');
+
+post('/create-card', 'pages/create-card.php');
+
 get('/total', 'pages/total.php');
 
-get('/$id', 'pages/index.php');
 
 // get('/user/$id', 'views/user');
 
