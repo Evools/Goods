@@ -40,7 +40,8 @@
     </div>
   </div>
 
-  <a href="/" class="nav-button">
+  <a href="/logout" class="nav-button">
+    <?= $_SESSION['email']; ?>
     <img src="./assets/img/icons/logout.svg" alt="">
     <span>Выйти</span>
   </a>

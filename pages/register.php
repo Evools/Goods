@@ -1,41 +1,5 @@
 <?php $title_name = "Авторизация"; ?>
 
-<?php
-
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
-require_once "./include/config.php";
-global $connect;
-
-if(isset($_POST['register'])){
-  $errMsg = '';
-
-  $username = $_POST['username'];
-  $email = $_POST['email'];
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-  try {
-    $sql = "INSERT INTO users ( `username`, `email`, `password` ) VALUES ( :username, :email, :password )";
-    $query = $connect->prepare( $sql );
-    $result = $query->execute([
-      ':username'=> $username,
-      ':email'=> $email,
-      ':password'=> $password
-
-    ]);
-    if (!empty($result) ){
-        header('location: /login');
-    }
-  } catch (PDOException $e) {
-    $errMsg = $e->getMessage();
-  }
-}
-
-
-?>
-
 <?php include "./layout/header.php"; ?>
 
 <div class="main">

@@ -1,21 +1,10 @@
 <?php $title_name = "Create Card"; ?>
 
 <?php
-    session_start();
-
-    if (isset($_POST['create-total'])){
-        $_SESSION['is_auth'] = true;
-        $_SESSION['user'] = "Jim Harris";
-        $_SESSION['email'] = "jimharris@mail.com";
-
-        header('location: /');
-
-    }
-
-    if (isset($_POST['logout'])){
-        session_destroy();
-    }
-
+  require_once "./include/function.php";
+  if(!isset($_SESSION['is_auth'])){
+    redirect_to('/login');
+  }
 ?>
 
 <?php include "./layout/header.php"; ?>
