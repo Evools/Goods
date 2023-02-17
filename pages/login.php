@@ -7,6 +7,10 @@
 require_once "./include/config.php";
 require_once "./include/function.php";
 
+if(isset($_SESSION['is_auth'])){
+  redirect_to('/');
+}
+
 session_start();
 
 $data = $_POST;
@@ -26,6 +30,8 @@ if (isset($data['auth'])) {
   }
 
   if(!$errMsg){
+
+    
     $select_all_users = "SELECT * FROM `users`";
     $result_all_users = mysqli_query($connect, $select_all_users);
 

@@ -68,4 +68,5 @@ $result = [1, 2,3,4,5,6,7,8];
 
     </tbody>
   </table>
+  <button class="nav-button bg-indigo mt-3">Добавить товар</button>
 </div>

@@ -2,7 +2,7 @@
 
   function redirect_to($location)
   {
-    return header("Location: $location");
+    return header("location: $location");
   }
 
   function clear_field($field)
