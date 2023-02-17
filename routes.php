@@ -10,8 +10,8 @@ get('/create-card', 'pages/create-card.php');
 post('/create-card', 'pages/create-card.php');
 get('/total', 'pages/total.php');
 
-post('/register', 'function/register.php');
-post('/auth', 'function/auth.php');
+post('/login', 'pages/login.php');
+post('/register', 'pages/register.php');
 
 get('/logout', 'function/logout.php');
 

@@ -638,3 +638,9 @@
 .btn-login{
   background: #5B5CE2;
 }
+
+
+.errMsg{
+  font-weight: normal !important;
+  color: #e25b5b !important;
+}
